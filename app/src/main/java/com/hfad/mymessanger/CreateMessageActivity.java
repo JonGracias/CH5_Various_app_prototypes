@@ -2,6 +2,7 @@ package com.hfad.mymessanger;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,6 +15,8 @@ public class CreateMessageActivity extends AppCompatActivity {
     }
 
     public void onSendMessage(View view){
+        Intent intent = new Intent(this, ReceiveMessageActivity.class);
+        startActivity(intent);
 
     }
 
