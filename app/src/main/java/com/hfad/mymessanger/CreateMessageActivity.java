@@ -18,9 +18,15 @@ public class CreateMessageActivity extends AppCompatActivity {
     public void onSendMessage(View view){
         EditText messageView = findViewById(R.id.message);
         String messageText = messageView.getText().toString();
-        Intent intent = new Intent(this, ReceiveMessageActivity.class);
-        intent.putExtra("message", messageText);
-        startActivity(intent);
+        //Intent intent = new Intent(this, ReceiveMessageActivity.class);
+        //intent.putExtra("message", messageText);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, messageText);
+        String chooserTitle = getString(R.string.chooser);
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        //startActivity(intent);
+        startActivity(chosenIntent);
 
     }
 
