@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Messenger</string>
     <string name="send">Send Message</string>
-    <string name="hint">Enter a message</string>
+    <string name="message">Message</string>
     <string name="chooser">Send message via…</string>
+    <string name="to">To</string>
 </resources>
